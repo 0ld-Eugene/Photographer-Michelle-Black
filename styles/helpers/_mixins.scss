@@ -1,0 +1,43 @@
+@mixin respond($breakpoint) {
+   @if $breakpoint == tablet {
+      @media (min-width: 768px) {
+         @content;
+      }
+   }
+   @if $breakpoint == desktop {
+      @media (min-width: 1200px) {
+         @content;
+      }
+   }
+}
+
+// Flex-mixin
+@mixin flex($direction: row, $gap: 0, $justify: flex-start, $align: stretch) {
+   display: flex;
+   flex-direction: $direction;
+   justify-content: $justify;
+   align-items: $align;
+   gap: #{$gap}px;
+}
+
+// Grid
+@mixin grid-col($gap, $quantity, $fraction) {
+   display: grid;
+   gap: #{$gap}px;
+   grid-template-columns: repeat($quantity, #{$fraction}fr);
+}
+
+// Возможно
+@mixin fluid-text($min, $max, $min-vw: 375, $max-vw: 1440) {
+   font-size: clamp(
+      #{$min}px,
+      calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw}))),
+      #{$max}px
+   );
+}
+
+@mixin font($family, $weight: 400, $style: normal) {
+   font-family: $family;
+   font-weight: $weight;
+   font-style: $style;
+}

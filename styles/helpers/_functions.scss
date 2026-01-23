@@ -1,0 +1,14 @@
+// SCSS font-size: rem(18);
+@function rem($px) {
+   @return #{$px / 16}rem;
+}
+
+//Цвет с прозрачностью
+@function rgba-color($color, $opacity) {
+   @return rgba($color, $opacity);
+}
+
+//Расчёт ширины колонок
+@function col-width($cols, $total: 12) {
+   @return percentage($cols / $total);
+}

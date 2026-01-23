@@ -1,0 +1,33 @@
+@use "helpers/intermediary" as h;
+
+body {
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   color: #222;
+   background-color: #fff;
+}
+
+main {
+   overflow-x: hidden;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.section {
+   padding: 60px 0;
+}
+
+:root {
+   --primary-bg-color: #1f1f1f;
+   --accent-color: #97c2ec;
+   --primary-text-color: #ffffff;
+   --secondary-text-color: #0a0909;
+   --light-bg-color: #c0c0c0;
+   --auxiliary-color-logo: #028502;
+   --auxiliary-color-cam: #d60101;
+}
+
