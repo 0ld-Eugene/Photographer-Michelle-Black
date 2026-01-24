@@ -1,7 +1,10 @@
+// ----------- Helpers ----------
 @use "helpers/normalize";
 @use "helpers/fonts";
 @use "helpers/variables";
 @use "helpers/mixins";
 @use "helpers/functions";
-
+@use "helpers/globals";
+// ----------- Blocks ----------
 @use "base";
+@use "blocks/header";

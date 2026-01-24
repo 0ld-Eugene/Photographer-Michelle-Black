@@ -1,0 +1,8 @@
+@use "helpers/intermediary" as h;
+
+.font-secondary {
+   @include h.font(h.$ff-secondary, 500, normal);
+}
+.font-accent {
+   @include h.font(h.$ff-accent, 400, normal);
+}

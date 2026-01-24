@@ -1,18 +1,27 @@
 @use "helpers/intermediary" as h;
 
+html,
 body {
-   font-family: "Inter", sans-serif;
-   font-size: 16px;
-   color: #222;
-   background-color: #fff;
+   height: 100%;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+
+   @include h.font(h.$ff-primary, 700, normal);
+   font-size: 14px;
+   color: var(--primary-text-color);
+   background-color: var(--primary-bg-color);
 }
 
 main {
+   flex: 1;
    overflow-x: hidden;
 }
 
 .container {
-   max-width: 1200px;
+   max-width: 1260px;
    margin: 0 auto;
    padding: 0 20px;
 }
@@ -30,4 +39,3 @@ main {
    --auxiliary-color-logo: #028502;
    --auxiliary-color-cam: #d60101;
 }
-
