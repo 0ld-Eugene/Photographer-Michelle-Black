@@ -1,2 +1,153 @@
 @use "helpers/intermediary" as h;
 
+.header {
+   background-color: transparent;
+   padding: 1.25rem 0; // 20px
+
+   // .header__container
+
+   &__container {
+      @include h.flex(row, 0, space-between);
+      padding: 0 1.875rem; // 30px
+   }
+
+   // .header__left
+
+   &__left {
+      flex: 1 1 40rem; // 640px
+      align-items: center;
+   }
+
+   // .header__logo
+
+   &__logo {
+      height: 3.875rem; // 62px
+      display: flex;
+      align-items: center;
+      max-width: 14.6875rem; // 235px
+      padding: 1.5625rem 1.1875rem; // 25px 19px
+      a {
+         font-size: 1rem; // 16px
+         text-transform: uppercase;
+      }
+   }
+
+   // .header__right
+
+   &__right {
+      display: flex;
+      flex: 1 1 41.25rem; // 660px
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .header__nav
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.625rem, 2vw, 1.875rem);
+   }
+
+   // .header__item
+
+   &__item {
+      a {
+         font-size: 0.75rem;
+      }
+   }
+
+   // .header__connect
+
+   &__connect {
+      display: flex;
+      align-items: center;
+      height: 2.3125rem; // 37px
+   }
+
+   // .header__btn
+
+   &__btn {
+      font-size: 0.75rem; // 12px
+      height: 100%;
+      padding: 0 1.25em; // 15px
+      cursor: pointer;
+      color: var(--primary-text-color);
+   }
+}
+// ===== corner-logo ======
+
+.corner-border {
+   position: relative;
+}
+.corner-border--tally {
+   &::before {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--auxiliary-color-logo);
+   }
+}
+.corner {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   border: 1px solid var(--primary-text-color);
+}
+
+.top-left {
+   top: 0;
+   left: 0;
+   border-right: none;
+   border-bottom: none;
+}
+.top-right {
+   top: 0;
+   right: 0;
+   border-left: none;
+   border-bottom: none;
+}
+.bottom-left {
+   bottom: 0;
+   left: 0;
+   border-right: none;
+   border-top: none;
+}
+.bottom-right {
+   bottom: 0;
+   right: 0;
+   border-left: none;
+   border-top: none;
+}
+
+// ====== Hover =======
+
+.header__item {
+   transition: color 0.2s ease-in-out;
+}
+.header__item:hover {
+   color: var(--accent-color);
+}
+
+.header__btn {
+   transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+}
+.header__btn:hover {
+   background-color: var(--accent-color);
+   color: var(--primary-bg-color);
+}
+
+.header__connect .corner {
+   transition: all 0.2s ease-in-out;
+}
+
+.header__connect:hover .corner {
+   opacity: 0;
+   visibility: hidden;
+}

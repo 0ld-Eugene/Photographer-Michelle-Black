@@ -8,7 +8,6 @@ body {
 body {
    display: flex;
    flex-direction: column;
-
    @include h.font(h.$ff-primary, 700, normal);
    font-size: 14px;
    color: var(--primary-text-color);
