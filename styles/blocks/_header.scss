@@ -94,8 +94,8 @@
 }
 .corner {
    position: absolute;
-   width: 20px;
-   height: 20px;
+   width: 15px;
+   height: 15px;
    border: 1px solid var(--primary-text-color);
 }
 
@@ -138,10 +138,6 @@
       background-color 0.2s ease-in-out,
       color 0.2s ease-in-out;
 }
-.header__btn:hover {
-   background-color: var(--accent-color);
-   color: var(--primary-bg-color);
-}
 
 .header__connect .corner {
    transition: all 0.2s ease-in-out;
@@ -150,4 +146,10 @@
 .header__connect:hover .corner {
    opacity: 0;
    visibility: hidden;
+}
+
+.header__connect:hover .header__btn,
+.header__btn:hover {
+   background-color: var(--accent-color);
+   color: var(--primary-bg-color);
 }
