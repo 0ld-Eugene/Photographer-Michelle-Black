@@ -1,6 +1,12 @@
 @use "helpers/intermediary" as h;
 
 .header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 100;
+
    background-color: transparent;
    padding: 1.25rem 0; // 20px
 
