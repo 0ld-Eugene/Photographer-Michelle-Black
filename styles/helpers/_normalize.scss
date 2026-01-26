@@ -37,8 +37,10 @@ ol {
 /* images */
 img,
 picture {
-   max-width: 100%;
-   display: block;
+   height: 100%;
+   width: 100%;
+   // display: block;
+   object-fit: cover;
 }
 
 /* links */

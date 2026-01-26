@@ -1,2 +1,153 @@
 @use "helpers/intermediary" as h;
 
+.footer {
+   background-color: var(--light-bg-color);
+   padding-top: 24px;
+   padding-bottom: 60px;
+
+   // .footer__container
+
+   &__container {
+      @include h.flex(column, 15, space-between);
+   }
+
+   // .footer__inner
+
+   &__inner {
+      @include h.flex(row, 30, space-between);
+      padding-bottom: 40px;
+      // gap: clamp(1.875rem, 2vw, 17.875rem);
+   }
+
+   // .footer__left
+
+   &__left {
+      display: flex;
+      gap: clamp(20px, 6.67vw, 100px);
+   }
+
+   // .footer__contacts
+
+   &__contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   // .footer__title
+
+   &__title {
+      color: var(--secondary-text-color);
+   }
+
+   // .footer__socials
+
+   &__socials {
+      @include h.flex(column, 20);
+      color: var(--secondary-text-color);
+   }
+
+   // .footer__item
+
+   &__item {
+   }
+
+   &__item a {
+      display: inline-block;
+      transition: color 0.2s ease-in-out;
+   }
+
+   &__item a:hover {
+      color: var(--primary-text-color);
+   }
+
+   // .footer__photo
+
+   &__photo {
+      padding: 13px 19px;
+   }
+
+   // .footer__img-box
+
+   &__img-box {
+      max-width: 273px;
+      max-height: 273px;
+   }
+
+   // .footer__right
+
+   &__right {
+      @include h.flex(column, 0, space-between);
+   }
+
+   // .footer__cta
+
+   &__cta {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.14375rem; // 18.3px
+      line-height: 0.87;
+      letter-spacing: 0em;
+      text-align: right;
+      color: var(--secondary-text-color);
+      span {
+         display: inline-block;
+      }
+   }
+
+   // .footer__btn
+
+   &__btn {
+      padding: 14px 15px;
+      cursor: pointer;
+      transition:
+         background-color 0.2s ease-in-out,
+         color 0.2s ease-in-out;
+   }
+
+   // .footer__bottom
+
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   // .footer__pivacy
+
+   &__pivacy {
+   }
+
+   // .footer__triangle
+
+   &__triangle {
+   }
+
+   // .footer__copyright
+
+   &__copyright {
+   }
+
+   // .footer__stripe
+
+   &__stripe {
+      width: 100%;
+      height: auto;
+   }
+}
+//=========== .corner ===========
+
+.footer__photo .corner {
+   border-color: var(--secondary-text-color);
+   width: 30px;
+   height: 30px;
+}
+.footer__btn .corner {
+   border-color: var(--secondary-text-color);
+}
+
+//=========== :hover ============
+
+.footer__btn:hover {
+   background-color: var(--secondary-text-color);
+   color: var(--primary-text-color);
+}

@@ -8,6 +8,7 @@ body {
 body {
    display: flex;
    flex-direction: column;
+   flex-shrink: 0;
    @include h.font(h.$ff-primary, 700, normal);
    font-size: 14px;
    color: var(--primary-text-color);
@@ -53,4 +54,26 @@ main {
    --light-bg-color: #c0c0c0;
    --auxiliary-color-logo: #028502;
    --auxiliary-color-cam: #d60101;
+}
+
+// ========= typography ===========
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   line-height: 1;
+   letter-spacing: -0.04em;
+   text-align: left;
+   text-transform: uppercase;
+}
+h1 {
+   font-size: 2.75rem; // 44px
+}
+h2 {
+   font-size: 2.25rem; // 36px
+}
+h3 {
+   font-size: 2.125rem; // 34px
 }
