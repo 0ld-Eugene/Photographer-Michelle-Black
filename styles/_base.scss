@@ -1,21 +1,29 @@
 @use "helpers/intermediary" as h;
 
-html,
-body {
-   height: 100%;
+// скрытие скролла
+
+html {
+   scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+   display: none; /* Chrome, Edge, Safari */
 }
 
 body {
-   display: flex;
-   flex-direction: column;
-   flex-shrink: 0;
    @include h.font(h.$ff-primary, 700, normal);
    font-size: 14px;
    color: var(--primary-text-color);
    background-color: var(--primary-bg-color);
 }
 
-body::after {
+.wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.wrapper::after {
    content: "";
    position: fixed;
    top: 0;
@@ -33,13 +41,13 @@ body::after {
 
 main {
    flex: 1;
-   overflow-x: hidden;
 }
 
 .container {
    max-width: 1260px;
+   width: 100%;
    margin: 0 auto;
-   padding: 0 20px;
+   padding: 0 1.25rem; // 20px
 }
 
 .section {

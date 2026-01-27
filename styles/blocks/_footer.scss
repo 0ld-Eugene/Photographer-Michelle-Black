@@ -1,6 +1,7 @@
 @use "helpers/intermediary" as h;
 
 .footer {
+   width: 100%;
    background-color: var(--light-bg-color);
    padding-top: 24px;
    padding-bottom: 60px;
@@ -149,5 +150,9 @@
 
 .footer__btn:hover {
    background-color: var(--secondary-text-color);
+   color: var(--primary-text-color);
+}
+
+.footer__item a:hover {
    color: var(--primary-text-color);
 }

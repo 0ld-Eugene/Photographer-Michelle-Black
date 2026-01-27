@@ -1,0 +1,57 @@
+@use "helpers/intermediary" as h;
+
+// 605 left
+// 650 right
+// 1260 all
+
+.hero {
+   padding: 6.25rem 0; // 100px
+   // .hero__container
+
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(0, 570fr) minmax(0, 650fr);
+      column-gap: clamp(1.25rem, 5vw, 2.5rem);
+   }
+
+   // .hero__left
+
+   &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   // .hero__inner
+
+   &__inner {
+      margin-top: -256px;
+   }
+
+   // .hero__item
+
+   &__item {
+   }
+
+   // .hero__text
+
+   &__text {
+   }
+
+   // .hero__right
+
+   &__right {
+   }
+
+   // .hero__image
+
+   &__image {
+   }
+}
+
+.item-left {
+}
+.item-center {
+}
+.item-right {
+}
