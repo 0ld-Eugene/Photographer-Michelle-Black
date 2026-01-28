@@ -1,0 +1,95 @@
+@use "helpers/intermediary" as h;
+
+.story {
+   padding-top: 50px;
+   padding-bottom: 200px;
+
+   // .story__container
+
+   &__container {
+      @include h.flex(column);
+      gap: clamp(0.62rem, 2.5vw, 2.69rem);
+   }
+
+   // .story__title
+
+   &__title {
+      display: flex;
+      flex-direction: column;
+      color: var(--accent-color);
+      span {
+         display: inline-block;
+         text-align: right;
+         letter-spacing: -0.045rem;
+         color: var(--primary-text-color);
+      }
+   }
+
+   // .story__content
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   // .story__block-a
+
+   &__block-a {
+   }
+
+   // .story__block-b
+
+   &__block-b {
+   }
+}
+
+.block-a {
+   display: flex;
+   gap: clamp(1.875rem, 3.73vw, 4.375rem);
+
+   // .block-a__text
+
+   &__text {
+      color: var(--accent-color);
+      max-width: 132px;
+      text-align: justify;
+      letter-spacing: 0em;
+      font-size: 18px;
+      display: flex;
+      align-items: flex-end;
+   }
+
+   // .block-a__decor
+
+   &__decor {
+      width: 200px;
+      height: 175px;
+   }
+}
+
+.block-b {
+   max-width: 596px;
+   @include h.flex(column);
+   gap: clamp(10px, 2.1vw, 40px);
+   // .block-b__title
+
+   &__title {
+      text-align: justify;
+      text-transform: none;
+      letter-spacing: 0em;
+   }
+
+   // .block-b__text
+
+   &__text {
+      display: flex;
+      gap: clamp(15px, 2.7vw, 50px);
+      p {
+         text-align: justify;
+         letter-spacing: 0em;
+      }
+      p + p {
+         max-width: 296px;
+      }
+   }
+}

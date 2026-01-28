@@ -10,7 +10,7 @@
 
    &__container {
       display: grid;
-      grid-template-columns: minmax(0, 570fr) minmax(0, 650fr);
+      grid-template-columns: minmax(0, 570fr) minmax(0, 600fr);
       column-gap: clamp(1.25rem, 6vw, 2.5rem);
    }
 
@@ -51,7 +51,7 @@
       justify-content: space-between;
       p {
          max-width: 205px;
-         word-spacing: 7px;
+         text-align: justify;
       }
    }
 
@@ -67,7 +67,7 @@
       position: relative;
       height: 100%;
       width: 100%;
-      aspect-ratio: 650 / 574;
+      aspect-ratio: 600 / 574;
       overflow: hidden;
    }
 }
