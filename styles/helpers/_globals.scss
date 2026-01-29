@@ -5,4 +5,5 @@
 }
 .font-accent {
    @include h.font(h.$ff-accent, 400, normal);
+   font-size: 1.125rem;
 }

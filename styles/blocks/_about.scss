@@ -1,0 +1,78 @@
+@use "helpers/intermediary" as h;
+
+.about {
+   // ===================
+   // .about__container
+
+   &__container {
+      padding-top: 8.75rem; // 140px
+      padding-bottom: 8.75rem; // 140px
+      // ===================
+      background-image: url(../sources/about-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+   }
+
+   // .about__inner
+
+   &__inner {
+      max-width: 38.75rem; // 620px
+      @include h.flex-m(column, space-between);
+      gap: clamp(3.125rem, 26.7vw, 33.125rem);
+   }
+
+   // .about__content
+
+   &__content {
+      @include h.flex-m(column, space-between);
+      gap: clamp(1.25rem, 2.65vw, 3.125rem);
+   }
+
+   // .about__title
+
+   &__title {
+   }
+
+   // .about__box
+
+   &__box {
+      width: 100%;
+      @include h.flex-m(row, flex-start);
+      gap: clamp(1.25rem, 2.65vw, 3.125rem);
+   }
+
+   // .about__column
+
+   &__column {
+      @include h.flex-m(column, space-between);
+      gap: clamp(0.25rem, 2.67vw, 1.5rem);
+   }
+
+   // .about__column--left
+
+   &__column--left {
+      max-width: 15.5rem; // 248px
+   }
+
+   // .about__column--right
+
+   &__column--right {
+      max-width: 16.375rem; // 262px
+   }
+
+   // .about__text
+
+   &__text {
+      letter-spacing: 0em;
+      text-align: justify;
+   }
+
+   // .about__decor
+
+   &__decor {
+      max-width: 16.875rem; // 270px
+      color: var(--accent-color);
+      text-align: justify;
+   }
+}

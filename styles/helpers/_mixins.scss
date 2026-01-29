@@ -19,6 +19,12 @@
    align-items: $align;
    gap: #{$gap}px;
 }
+// Flex-mixin-minimal
+@mixin flex-m($direction: row, $justify: flex-start) {
+   display: flex;
+   flex-direction: $direction;
+   justify-content: $justify;
+}
 
 // Grid
 @mixin grid-col($gap, $quantity, $fraction) {
