@@ -1,8 +1,8 @@
 @use "helpers/intermediary" as h;
 
 .story {
-   padding-top: 50px;
-   padding-bottom: 60px;
+   padding-top: 3.125rem; // 50px
+   padding-bottom: 3.125rem; // 50px
 
    // .story__container
 
@@ -51,10 +51,10 @@
 
    &__text {
       color: var(--accent-color);
-      max-width: 132px;
+      max-width: 8.25rem; // 132px
       text-align: justify;
       letter-spacing: 0em;
-      font-size: 18px;
+      font-size: 1.125rem; // 18px
       display: flex;
       align-items: flex-end;
    }
@@ -62,15 +62,16 @@
    // .block-a__decor
 
    &__decor {
-      width: 200px;
-      height: 175px;
+      width: 12.5rem; // 200px
+      height: 10.9375rem; // 175px
    }
 }
 
 .block-b {
-   max-width: 596px;
+   max-width: 37.25rem; // 596px
    @include h.flex(column);
-   gap: clamp(10px, 2.1vw, 40px);
+   gap: clamp(0.625rem, 2.13vw, 2.5rem); // 10px 40px
+
    // .block-b__title
 
    &__title {
@@ -83,13 +84,13 @@
 
    &__text {
       display: flex;
-      gap: clamp(15px, 2.7vw, 50px);
+      gap: clamp(0.9375rem, 2.7vw, 3.125rem); // 15px 50px
       p {
          text-align: justify;
          letter-spacing: 0em;
       }
       p + p {
-         max-width: 296px;
+         max-width: 18.5rem; // 296px
       }
    }
 }
