@@ -1,7 +1,7 @@
 @use "helpers/intermediary" as h;
 
 .hero {
-   padding: 6.25rem 0; // 100px
+   padding: calc(6.25rem + 3.125rem) 0; // 100px
    // .hero__container
 
    &__container {

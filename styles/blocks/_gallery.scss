@@ -1,6 +1,8 @@
 @use "helpers/intermediary" as h;
 
 .gallery {
+   padding-top: 0;
+   padding-bottom: 0;
    // .gallery__container
 
    &__container {

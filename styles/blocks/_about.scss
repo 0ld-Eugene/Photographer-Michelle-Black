@@ -1,8 +1,9 @@
 @use "helpers/intermediary" as h;
 
 .about {
-   // ===================
    // .about__container
+   padding-bottom: 0;
+   padding-top: 0;
 
    &__container {
       padding-top: 8.75rem; // 140px

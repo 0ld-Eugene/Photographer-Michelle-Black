@@ -1,8 +1,17 @@
-1. Project name "Photographer Michelle Black";
-2. Used pixel perfect layout, mobile-first;
-3. Project launch -> 
-npm i -> 
-npm run watch(to watching scss)
-/npm run build(to minifi, add prefixes to CSS)
-/npm run minify(to minifi pictures);
-4. 
+## Project name 
+
+Photographer Michelle Black
+
+## Project launch
+
+- npm i 
+- Watch SCSS:npm run watch
+- Build CSSnpm run build
+- Minify images:npm run minify
+
+## Features
+
+- Vanilla JavaScript (no libraries)
+- Modal window (image preview)
+- Hover image preview (cursor-follow)
+- Tabs navigation
