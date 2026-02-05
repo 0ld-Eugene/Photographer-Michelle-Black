@@ -51,7 +51,25 @@ main {
 }
 
 section {
-   padding: 60px 0;
+   padding: 6.25rem 0;
+}
+
+.overlay {
+   position: fixed;
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   z-index: 101;
+
+   opacity: 0;
+   visibility: hidden;
+}
+.overlay.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.body--no-scroll {
+   overflow: hidden;
 }
 
 :root {

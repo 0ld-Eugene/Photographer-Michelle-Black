@@ -1,16 +1,12 @@
 @use "helpers/intermediary" as h;
 
-// 605 left
-// 650 right
-// 1260 all
-
 .hero {
-   padding: 6.25rem 0; // 100px
+   padding: calc(6.25rem + 3.125rem) 0; // 100px
    // .hero__container
 
    &__container {
       display: grid;
-      grid-template-columns: minmax(0, 570fr) minmax(0, 600fr);
+      grid-template-columns: minmax(0, 570fr) minmax(0, 590fr);
       column-gap: clamp(1.25rem, 6vw, 2.5rem);
    }
 
@@ -38,7 +34,7 @@
    &__item {
       position: relative;
       grid-area: 1 / 1;
-      font-size: 18px;
+      font-size: 1.125rem; // 18px
       line-height: 0.87;
       word-spacing: 4px;
       color: var(--accent-color);
@@ -50,7 +46,7 @@
       display: flex;
       justify-content: space-between;
       p {
-         max-width: 205px;
+         max-width: 12.8125rem; // 205px
          text-align: justify;
       }
    }
@@ -58,7 +54,8 @@
    // .hero__right
 
    &__right {
-      max-height: 574px;
+      max-height: 35.875rem; // 574px
+      max-width: 600px;
    }
 
    // .hero__image

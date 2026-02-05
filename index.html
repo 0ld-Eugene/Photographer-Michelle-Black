@@ -99,7 +99,93 @@
       </section>
 
       <section class="gallery">
-        <div class="gallery__container container"></div>
+        <div class="gallery__container container">
+          <div class="gallery__tabs-wrapper">
+            <div class="gallery__tabs-buttons">
+              <button class="gallery__tabs-btn" data-tab="landscape" type="button">
+                landscape
+              </button>
+              <span class="gallery__tabs-btn--separator">#</span>
+              <button class="gallery__tabs-btn" data-tab="fashion" type="button">
+                fashion
+              </button>
+              <span class="gallery__tabs-btn--separator">#</span>
+              <button class="gallery__tabs-btn active" data-tab="street" type="button">
+                street
+              </button>
+              <span class="gallery__tabs-btn--separator">#</span>
+              <button class="gallery__tabs-btn" data-tab="portrait" type="button">
+                portrait
+              </button>
+            </div>
+            <div class="gallery__tabs-inner">
+              <div class="gallery__tabs-images" data-tab="landscape">
+                <div class="gallery__tabs-track">
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide reverse">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide reverse">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="gallery__tabs-images" data-tab="fashion">
+                <div class="gallery__tabs-track">
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="gallery__tabs-images active" data-tab="street">
+                <div class="gallery__tabs-track">
+                  <div class="gallery__tabs-slide reverse">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide reverse">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="gallery__tabs-images" data-tab="portrait">
+                <div class="gallery__tabs-track">
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <img src="./sources/tab-image-1.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="story">
@@ -180,7 +266,74 @@
       </section>
 
       <section class="stages">
-        <div class="stages__container container"></div>
+        <div class="stages__container container">
+          <h2 class="stages__title">
+            Stages of work
+          </h2>
+          <ol class="stages__list">
+            <li class="stages__item" data-elem="1">
+              <h4 class="stages__item-title">
+                Introduction and discussion
+              </h4>
+              <p class="stages__item-desc font-secondary">
+                We start by discussing your ideas, goals, and preferences. It helps me understand what mood and style
+                you want to convey in your photos.
+              </p>
+            </li>
+            <li class="stages__item" data-elem="2">
+              <h4 class="stages__item-title">
+                Concept development
+              </h4>
+              <p class="stages__item-desc font-secondary">
+                Based on our conversation, I'm developing a shooting concept, including location selection, image
+                selection, and creating a mudboard (if necessary).
+              </p>
+            </li>
+            <li class="stages__item" data-elem="3">
+              <h4 class="stages__item-title">
+                Taking photos
+              </h4>
+              <p class="stages__item-desc font-secondary">
+                On the day of shooting, I create a comfortable and creative atmosphere so that you can relax and enjoy
+                the process. We work together to capture the best moments.
+              </p>
+            </li>
+            <li class="stages__item" data-elem="4">
+              <h4 class="stages__item-title">
+                Photo selection and processing
+              </h4>
+              <p class="stages__item-desc font-secondary">
+                After shooting, I carefully select the best shots and begin professional processing to emphasize the
+                beauty and expressiveness of each photo.
+              </p>
+            </li>
+            <li class="stages__item" data-elem="5">
+              <h4 class="stages__item-title">
+                Transfer of the finished material
+              </h4>
+              <p class="stages__item-desc font-secondary">
+                You get high-resolution photos ready for publication and printing.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="stages__images">
+          <div class="stages__image-item" data-elem="1">
+            <img src="./sources/stages-item-1.jpg" alt="">
+          </div>
+          <div class="stages__image-item" data-elem="2">
+            <img src="./sources/stages-item-2.jpg" alt="">
+          </div>
+          <div class="stages__image-item" data-elem="3">
+            <img src="./sources/stages-item-3.jpg" alt="">
+          </div>
+          <div class="stages__image-item" data-elem="4">
+            <img src="./sources/stages-item-4.jpg" alt="">
+          </div>
+          <div class="stages__image-item" data-elem="5">
+            <img src="./sources/stages-item-5.jpg" alt="">
+          </div>
+        </div>
       </section>
 
       <section class="cost">
@@ -227,7 +380,7 @@
                   300$
                 </div>
               </header>
-              <div class="cost__item-image corner-border">
+              <div class="cost__item-image corner-border" data-src="./sources/price-portrait.png">
                 <span class="corner top-left"></span>
                 <span class="corner top-right"></span>
                 <span class="corner bottom-left"></span>
@@ -248,7 +401,7 @@
                   200$
                 </div>
               </header>
-              <div class="cost__item-image corner-border">
+              <div class="cost__item-image corner-border" data-src="./sources/price-landscape.png">
                 <span class="corner top-left"></span>
                 <span class="corner top-right"></span>
                 <span class="corner bottom-left"></span>
@@ -269,7 +422,7 @@
                   500$
                 </div>
               </header>
-              <div class="cost__item-image corner-border">
+              <div class="cost__item-image corner-border" data-src="./sources/price-fashion.png">
                 <span class="corner top-left"></span>
                 <span class="corner top-right"></span>
                 <span class="corner bottom-left"></span>
@@ -290,7 +443,7 @@
                   400$
                 </div>
               </header>
-              <div class="cost__item-image corner-border">
+              <div class="cost__item-image corner-border" data-src="./sources/price-street.png">
                 <span class="corner top-left"></span>
                 <span class="corner top-right"></span>
                 <span class="corner bottom-left"></span>
@@ -308,6 +461,9 @@
     </main>
     <footer class="footer">
       <div class="footer__container container">
+        <div class="footer__patch">
+          <img src="./sources/patch.png" alt="">
+        </div>
         <div class="footer__inner">
           <div class="footer__left">
             <div class="footer__contacts" id="contacts">
@@ -478,6 +634,15 @@
       </div>
     </footer>
   </div>
+  <div class="overlay"></div>
+  <div class="modal-cost">
+    <div class="modal-cost__content">
+      <img class="modal-cost__image" src="" alt="">
+      <button class="modal-cost__btn-close" type="button">x</button>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
