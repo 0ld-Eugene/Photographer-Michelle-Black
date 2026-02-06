@@ -54,7 +54,8 @@
    // .hero__right
 
    &__right {
-      max-height: 35.875rem; // 574px
+      // max-height: 35.875rem; // 574px
+      height: auto;
       max-width: 600px;
    }
 
@@ -64,8 +65,11 @@
       position: relative;
       height: 100%;
       width: 100%;
-      aspect-ratio: 600 / 574;
+      aspect-ratio: 500 / 574;
       overflow: hidden;
+      img {
+         object-fit: contain;
+      }
    }
 }
 

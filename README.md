@@ -11,6 +11,7 @@ Photographer Michelle Black
 
 ## Features
 
+- SVG-sprites
 - Vanilla JavaScript (no libraries)
 - Modal window (image preview)
 - Hover image preview (cursor-follow)

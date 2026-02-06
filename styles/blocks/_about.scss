@@ -8,8 +8,12 @@
    &__container {
       padding-top: 8.75rem; // 140px
       padding-bottom: 8.75rem; // 140px
-      // ===================
-      background-image: url(../sources/about-bg.png);
+
+      background-image: image-set(
+         url("../images/about-bg.avif") type("image/avif"),
+         url("../images/about-bg.webp") type("image/webp"),
+         url("../images/about-bg.png")
+      );
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100% 100%;

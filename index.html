@@ -5,14 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Landing page for a professional photographer.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <!-- Пока не на сервере -->
+  <!-- <meta property="og:url" content="https://michelle-black.com/"> -->
   <meta property="og:title" content="Photographer Portfolio">
   <meta property="og:description" content="Landing page for a professional photographer.">
-  <meta property="og:image" content="./images/og-image.jpg">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="./css/main.css">
+  <!-- <meta property="og:image" content="https://michelle-black.com/images/og-image.jpg"> -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Photographer Portfolio">
+  <meta name="twitter:description" content="Landing page for a professional photographer.">
+  <!-- <meta name="twitter:image" content="https://michelle-black.com/images/og-image.jpg"> -->
+
+  <!-- Favicon -->
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="css/main.css">
   <title>Michelle Black</title>
 </head>
 
@@ -30,11 +44,19 @@
           </div>
         </div>
         <div class="header__right">
-          <ul class="header__nav" aria-label="Navigation menu">
+          <!-- <ul class="header__nav" aria-label="Navigation menu">
             <li class="header__item"><a href="#about">About me</a></li>
             <li class="header__item"><a href="#work">My work</a></li>
             <li class="header__item"><a href="#contacts">Contacts</a></li>
-          </ul>
+          </ul> -->
+          <nav class="header__nav" aria-label="Navigation menu">
+            <ul class="header__items">
+              <li class="header__item"><a href="#about">About me</a></li>
+              <li class="header__item"><a href="#work">My work</a></li>
+              <li class="header__item"><a href="#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+
           <div class="header__connect corner-border">
             <button class="header__btn" aria-label="Select a date for booking" type="button">
               Select a date
@@ -49,7 +71,7 @@
     </header>
 
     <main class="main">
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-heading">
         <div class="hero__container container">
           <div class="hero__left">
             <div class="hero__title">
@@ -63,7 +85,7 @@
                   Stories seen through my lens.
                 </div>
                 <div class="hero__item item-right font-accent">
-                  <svg viewBox="0 0 125 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 125 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <circle cx="62.3101" cy="54.8709" r="49.29" stroke="white" stroke-width="0.62" />
                     <line x1="62.6201" y1="46.31" x2="62.6201" y2="64.31" stroke="white" stroke-width="0.62" />
                     <line x1="53.3101" y1="55.0001" x2="71.3101" y2="55.0001" stroke="white" stroke-width="0.62" />
@@ -89,97 +111,169 @@
           <div class="hero__right">
             <div class="hero__image">
               <picture>
-                <!-- <source srcset="images/footer.avif" type="image/avif">
-                  <source srcset="images/footer.webp" type="image/webp"> -->
-                <img src="sources/hero.png" alt="">
+                <source srcset="images/hero.avif" type="image/avif">
+                <source srcset="images/hero.webp" type="image/webp">
+                <img src="images/hero.png" alt="photographer Michelle Black with a camera">
               </picture>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="gallery">
+      <section class="gallery" aria-labelledby="gallery-heading">
         <div class="gallery__container container">
           <div class="gallery__tabs-wrapper">
-            <div class="gallery__tabs-buttons">
-              <button class="gallery__tabs-btn" data-tab="landscape" type="button">
+            <div class="gallery__tabs-buttons" role="tablist" aria-label="Photo categories">
+              <button class="gallery__tabs-btn" data-tab="landscape" type="button" role="tab"
+                aria-controls="landscape-panel" id="landscape-tab">
                 landscape
               </button>
               <span class="gallery__tabs-btn--separator">#</span>
-              <button class="gallery__tabs-btn" data-tab="fashion" type="button">
+              <button class="gallery__tabs-btn" data-tab="fashion" type="button" role="tab"
+                aria-controls="fashion-panel" id="fashion-tab">
                 fashion
               </button>
               <span class="gallery__tabs-btn--separator">#</span>
-              <button class="gallery__tabs-btn active" data-tab="street" type="button">
+              <button class="gallery__tabs-btn active" data-tab="street" type="button" role="tab"
+                aria-controls="street-panel" id="street-tab">
                 street
               </button>
               <span class="gallery__tabs-btn--separator">#</span>
-              <button class="gallery__tabs-btn" data-tab="portrait" type="button">
+              <button class="gallery__tabs-btn" data-tab="portrait" type="button" role="tab"
+                aria-controls="portrait-panel" id="portrait-tab">
                 portrait
               </button>
             </div>
             <div class="gallery__tabs-inner">
-              <div class="gallery__tabs-images" data-tab="landscape">
+              <div class="gallery__tabs-images" data-tab="landscape" id="landscape-panel" role="tabpanel"
+                aria-labelledby="landscape-tab">
                 <div class="gallery__tabs-track">
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
-                  </div>
-                  <div class="gallery__tabs-slide reverse">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
-                  <div class="gallery__tabs-slide reverse">
-                    <img src="./sources/tab-image-1.png" alt="">
+                  <div class="gallery__tabs-slide">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                 </div>
               </div>
-              <div class="gallery__tabs-images" data-tab="fashion">
+              <div class="gallery__tabs-images" data-tab="fashion" id="fashion-panel" role="tabpanel"
+                aria-labelledby="fashion-tab">
                 <div class="gallery__tabs-track">
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                 </div>
               </div>
-              <div class="gallery__tabs-images active" data-tab="street">
+              <div class="gallery__tabs-images active" data-tab="street" id="street-panel" role="tabpanel"
+                aria-labelledby="street-tab">
                 <div class="gallery__tabs-track">
-                  <div class="gallery__tabs-slide reverse">
-                    <img src="./sources/tab-image-1.png" alt="">
+                  <div class="gallery__tabs-slide">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
-                  </div>
-                  <div class="gallery__tabs-slide reverse">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="gallery__tabs-slide">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                 </div>
               </div>
-              <div class="gallery__tabs-images" data-tab="portrait">
+              <div class="gallery__tabs-images" data-tab="portrait" id="portrait-panel" role="tabpanel"
+                aria-labelledby="portrait-tab">
                 <div class="gallery__tabs-track">
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                   <div class="gallery__tabs-slide">
-                    <img src="./sources/tab-image-1.png" alt="">
+                    <picture>
+                      <source srcset="images/tab-image-1.avif" type="image/avif">
+                      <source srcset="images/tab-image-1.webp" type="image/webp">
+                      <img src="images/tab-image-1.png" alt="">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -188,7 +282,7 @@
         </div>
       </section>
 
-      <section class="story">
+      <section class="story" aria-labelledby="story-heading">
         <div class="story__container container">
           <h3 class="story__title">
             Street Photo Shoot:
@@ -230,7 +324,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" aria-labelledby="about-heading">
         <div class="about__container container">
           <div class="about__inner">
             <div class="about__content">
@@ -265,7 +359,7 @@
         </div>
       </section>
 
-      <section class="stages">
+      <section class="stages" aria-labelledby="stages-heading">
         <div class="stages__container container">
           <h2 class="stages__title">
             Stages of work
@@ -319,24 +413,44 @@
         </div>
         <div class="stages__images">
           <div class="stages__image-item" data-elem="1">
-            <img src="./sources/stages-item-1.jpg" alt="">
+            <picture>
+              <source srcset="images/stages-item-1.avif" type="image/avif">
+              <source srcset="images/stages-item-1.webp" type="image/webp">
+              <img src="images/stages-item-1.jpg" alt="">
+            </picture>
           </div>
           <div class="stages__image-item" data-elem="2">
-            <img src="./sources/stages-item-2.jpg" alt="">
+            <picture>
+              <source srcset="images/stages-item-2.avif" type="image/avif">
+              <source srcset="images/stages-item-2.webp" type="image/webp">
+              <img src="images/stages-item-2.jpg" alt="">
+            </picture>
           </div>
           <div class="stages__image-item" data-elem="3">
-            <img src="./sources/stages-item-3.jpg" alt="">
+            <picture>
+              <source srcset="images/stages-item-3.avif" type="image/avif">
+              <source srcset="images/stages-item-3.webp" type="image/webp">
+              <img src="images/stages-item-3.jpg" alt="">
+            </picture>
           </div>
           <div class="stages__image-item" data-elem="4">
-            <img src="./sources/stages-item-4.jpg" alt="">
+            <picture>
+              <source srcset="images/stages-item-4.avif" type="image/avif">
+              <source srcset="images/stages-item-4.webp" type="image/webp">
+              <img src="images/stages-item-4.jpg" alt="">
+            </picture>
           </div>
           <div class="stages__image-item" data-elem="5">
-            <img src="./sources/stages-item-5.jpg" alt="">
+            <picture>
+              <source srcset="images/stages-item-5.avif" type="image/avif">
+              <source srcset="images/stages-item-5.webp" type="image/webp">
+              <img src="images/stages-item-5.jpg" alt="">
+            </picture>
           </div>
         </div>
       </section>
 
-      <section class="cost">
+      <section class="cost" aria-labelledby="cost-heading">
         <div class="cost__container container">
           <div class="cost__info">
             <div class="cost__top">
@@ -386,9 +500,9 @@
                 <span class="corner bottom-left"></span>
                 <span class="corner bottom-right"></span>
                 <picture>
-                  <!-- <source srcset="images/footer.avif" type="image/avif">
-                  <source srcset="images/footer.webp" type="image/webp"> -->
-                  <img src="sources/price-portrait.png" alt="">
+                  <source srcset="images/price-portrait.avif" type="image/avif">
+                  <source srcset="images/price-portrait.webp" type="image/webp">
+                  <img src="images/price-portrait.png" alt="">
                 </picture>
               </div>
             </div>
@@ -407,9 +521,9 @@
                 <span class="corner bottom-left"></span>
                 <span class="corner bottom-right"></span>
                 <picture>
-                  <!-- <source srcset="images/footer.avif" type="image/avif">
-                  <source srcset="images/footer.webp" type="image/webp"> -->
-                  <img src="sources/price-landscape.png" alt="">
+                  <source srcset="images/price-landscape.avif" type="image/avif">
+                  <source srcset="images/price-landscape.webp" type="image/webp">
+                  <img src="images/price-landscape.png" alt="">
                 </picture>
               </div>
             </div>
@@ -428,9 +542,9 @@
                 <span class="corner bottom-left"></span>
                 <span class="corner bottom-right"></span>
                 <picture>
-                  <!-- <source srcset="images/footer.avif" type="image/avif">
-                  <source srcset="images/footer.webp" type="image/webp"> -->
-                  <img src="sources/price-fashion.png" alt="">
+                  <source srcset="images/price-fashion.avif" type="image/avif">
+                  <source srcset="images/price-fashion.webp" type="image/webp">
+                  <img src="images/price-fashion.png" alt="">
                 </picture>
               </div>
             </div>
@@ -449,9 +563,9 @@
                 <span class="corner bottom-left"></span>
                 <span class="corner bottom-right"></span>
                 <picture>
-                  <!-- <source srcset="images/footer.avif" type="image/avif">
-                  <source srcset="images/footer.webp" type="image/webp"> -->
-                  <img src="sources/price-street.png" alt="">
+                  <source srcset="images/price-street.avif" type="image/avif">
+                  <source srcset="images/price-street.webp" type="image/webp">
+                  <img src="images/price-street.png" alt="">
                 </picture>
               </div>
             </div>
@@ -462,7 +576,11 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__patch">
-          <img src="./sources/patch.png" alt="">
+          <picture>
+            <source srcset="images/patch.avif" type="image/avif">
+            <source srcset="images/patch.webp" type="image/webp">
+            <img src="images/patch.png" alt="">
+          </picture>
         </div>
         <div class="footer__inner">
           <div class="footer__left">
@@ -492,9 +610,9 @@
               <span class="corner bottom-right"></span>
               <div class="footer__img-box">
                 <picture>
-                  <!-- <source srcset="images/footer.avif" type="image/avif">
-                  <source srcset="images/footer.webp" type="image/webp"> -->
-                  <img src="sources/footer.png" alt="">
+                  <source srcset="images/footer.avif" type="image/avif">
+                  <source srcset="images/footer.webp" type="image/webp">
+                  <img src="images/footer.png" alt="">
                 </picture>
               </div>
             </div>

@@ -37,6 +37,7 @@ export function initGalleryTabs() {
 
          // кнопки
          buttons.forEach(b => b.classList.remove('active'));
+
          this.classList.add('active');
 
          // контент

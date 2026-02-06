@@ -49,6 +49,11 @@
    // .header__nav
 
    &__nav {
+   }
+
+   // .header__items
+
+   &__items {
       display: flex;
       align-items: center;
       gap: clamp(0.625rem, 2vw, 1.875rem);
