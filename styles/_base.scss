@@ -1,10 +1,20 @@
 @use "helpers/intermediary" as h;
 
-// скрытие скролла
+:root {
+   --primary-bg-color: #1f1f1f;
+   --accent-color: #97c2ec;
+   --primary-text-color: #ffffff;
+   --secondary-text-color: #0a0909;
+   --light-bg-color: #c0c0c0;
+   --auxiliary-color-logo: #028502;
+   --auxiliary-color-cam: #d60101;
+}
 
 html {
    scrollbar-width: none;
+   scroll-behavior: smooth;
 }
+
 body::-webkit-scrollbar {
    display: none; /* Chrome, Edge, Safari */
 }
@@ -72,14 +82,11 @@ section {
    overflow: hidden;
 }
 
-:root {
-   --primary-bg-color: #1f1f1f;
-   --accent-color: #97c2ec;
-   --primary-text-color: #ffffff;
-   --secondary-text-color: #0a0909;
-   --light-bg-color: #c0c0c0;
-   --auxiliary-color-logo: #028502;
-   --auxiliary-color-cam: #d60101;
+#about {
+   scroll-margin-top: 65px;
+}
+#gallery {
+   scroll-margin-top: 110px;
 }
 
 // ========= typography ===========
