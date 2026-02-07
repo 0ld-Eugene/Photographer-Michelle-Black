@@ -11,6 +11,7 @@ export function initModalCost() {
       const currentItem = e.target.closest('.cost__item-image');
       if (!currentItem) return;
       const currentSrc = currentItem.dataset.src;
+      modalImg.src = "";
       modalImg.src = currentSrc;
 
       modalCost.classList.add('is-open');
