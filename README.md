@@ -6,7 +6,7 @@ Photographer Michelle Black
 
 - npm i 
 - Watch SCSS:npm run watch
-- Build CSSnpm run build
+- Build CSS: npm run build
 - Minify images:npm run minify
 
 ## Features
