@@ -13,6 +13,7 @@
 html {
    scrollbar-width: none;
    scroll-behavior: smooth;
+   font-size: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -21,7 +22,7 @@ body::-webkit-scrollbar {
 
 body {
    @include h.font(h.$ff-primary, 700, normal);
-   font-size: 14px;
+   font-size: 0.875rem;
    color: var(--primary-text-color);
    background-color: var(--primary-bg-color);
 }
@@ -150,3 +151,15 @@ h4 {
    border-left: none;
    border-top: none;
 }
+
+/* Desktop */
+// @media (max-width: 1200px)
+
+/* Tablet */
+// @media (max-width: 992px)
+
+/* Mobile */
+// @media (max-width: 768px)
+
+/* Small mobile */
+// @media (max-width: 480px)
