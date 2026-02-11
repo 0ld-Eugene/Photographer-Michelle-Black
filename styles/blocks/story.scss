@@ -10,6 +10,11 @@
       @include h.flex(column);
       gap: clamp(0.62rem, 2.5vw, 2.69rem);
    }
+   @media (max-width: 1200px) {
+      &__container {
+         gap: 40px;
+      }
+   }
 
    // .story__title
 
@@ -24,12 +29,35 @@
          color: var(--primary-text-color);
       }
    }
+   @media (max-width: 1200px) {
+      &__title {
+         font-size: 30px;
+      }
+   }
+   @media (max-width: 992px) {
+      &__title {
+         font-size: 20px;
+         span {
+            text-align: left;
+         }
+      }
+   }
+   @media (max-width: 768px) {
+      &__title {
+      }
+   }
 
    // .story__content
 
    &__content {
       display: flex;
       justify-content: space-between;
+      gap: clamp(1.875rem, 5vw, 3.125rem);
+   }
+   @media (max-width: 870px) {
+      &__content {
+         flex-direction: column-reverse;
+      }
    }
 
    // .story__block-a
@@ -58,12 +86,27 @@
       display: flex;
       align-items: flex-end;
    }
+   @media (max-width: 870px) {
+      &__text {
+         max-width: 100%;
+      }
+   }
 
    // .block-a__decor
 
    &__decor {
-      width: 12.5rem; // 200px
-      height: 10.9375rem; // 175px
+      max-width: 12.5rem; // 200px
+      max-height: 10.9375rem; // 175px
+
+      svg {
+         width: 100%;
+         height: 100%;
+      }
+   }
+   @media (max-width: 870px) {
+      &__decor {
+         max-width: 100%;
+      }
    }
 }
 
@@ -79,12 +122,17 @@
       text-transform: none;
       letter-spacing: 0em;
    }
+   @media (max-width: 1100px) {
+      &__title {
+         font-size: 20px;
+      }
+   }
 
    // .block-b__text
 
    &__text {
       display: flex;
-      gap: clamp(0.9375rem, 2.7vw, 3.125rem); // 15px 50px
+      gap: clamp(1.56rem, 2.7vw, 3.125rem); // 15px 50px
       p {
          text-align: justify;
          letter-spacing: 0em;
@@ -92,5 +140,18 @@
       p + p {
          max-width: 18.5rem; // 296px
       }
+   }
+   @media (max-width: 870px) {
+      &__text {
+         p + p {
+            max-width: 100%;
+         }
+      }
+   }
+}
+@media (max-width: 870px) {
+   .block-b {
+      max-width: 100%; // 470px
+      gap: 20px;
    }
 }

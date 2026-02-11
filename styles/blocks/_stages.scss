@@ -55,6 +55,29 @@
       letter-spacing: 0em;
       text-align: justify;
    }
+   @media (max-width: 1200px) {
+      &__item {
+         padding-left: 150px;
+      }
+   }
+   @media (max-width: 992px) {
+      &__item {
+         padding-left: 100px;
+      }
+   }
+   @media (max-width: 768px) {
+      &__item {
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         padding-top: 51px;
+         padding-left: 0;
+         gap: 12px;
+      }
+      &__item::before {
+         top: 23px;
+      }
+   }
 
    // .stages__item-title
 
@@ -72,6 +95,17 @@
       max-width: 600px;
       letter-spacing: 0em;
       text-align: justify;
+   }
+   @media (max-width: 768px) {
+      &__item-desc {
+         max-width: 100%;
+         padding-right: 10%;
+      }
+   }
+   @media (max-width: 600px) {
+      &__item-desc {
+         padding-right: 0;
+      }
    }
 
    // .stages__images
