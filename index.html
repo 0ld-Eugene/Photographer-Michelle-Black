@@ -43,9 +43,9 @@
             <a href="#" aria-label="Go to homepage">Michelle Black</a>
           </div>
         </div>
-        <div class="header__right">
+        <div class="header__right" id="mobile-menu" aria-hidden="false">
           <nav class="header__nav" aria-label="Navigation menu">
-            <ul class="header__items">
+            <ul class="header__items" id="mobile-menu">
               <li class="header__item"><a href="#about">About me</a></li>
               <li class="header__item"><a href="#gallery">My work</a></li>
               <li class="header__item"><a href="#footer">Contacts</a></li>
@@ -62,16 +62,21 @@
             <span class="corner bottom-right"></span>
           </div>
         </div>
+        <button id="burger" class="burger" type="button" aria-controls="mobile-menu">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
       </div>
     </header>
 
     <main class="main">
       <section class="hero">
         <div class="hero__container container">
+          <h1 class="hero__title--mobile">Photographer Michelle Black</h1>
           <div class="hero__left">
             <div class="hero__title">
-
-              <h1>Photographer Michelle Black </h1>
+              <h1 class="hero__title--desktop">Photographer Michelle Black</h1>
               <div class="hero__inner">
                 <div class="hero__item item-left font-accent">
                   To catch the elusive. See the unseen.
@@ -562,6 +567,19 @@
           </picture>
         </div>
         <div class="footer__inner">
+          <div class="footer__photo footer__photo--mobile corner-border">
+            <span class="corner top-left"></span>
+            <span class="corner top-right"></span>
+            <span class="corner bottom-left"></span>
+            <span class="corner bottom-right"></span>
+            <div class="footer__img-box">
+              <picture>
+                <source srcset="images/footer.avif" type="image/avif">
+                <source srcset="images/footer.webp" type="image/webp">
+                <img src="images/footer.png" alt="">
+              </picture>
+            </div>
+          </div>
           <div class="footer__left">
             <div class="footer__contacts" id="contacts">
               <h2 class="footer__title">

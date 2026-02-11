@@ -10,6 +10,12 @@
       @include h.flex-m(row, space-between);
       column-gap: 15px;
    }
+   @media (max-width: 885px) {
+      &__container {
+         flex-direction: column;
+         row-gap: 20px;
+      }
+   }
 
    // .cost__info
 
@@ -18,6 +24,19 @@
       max-width: 26.25rem; // 420px
       padding: 2.5rem; // 40px
       background-color: var(--light-bg-color);
+   }
+   @media (max-width: 992px) {
+      &__info {
+         padding: 30px;
+         max-width: 362px;
+      }
+   }
+   @media (max-width: 885px) {
+      &__info {
+         max-width: 100%;
+         padding: 40px;
+         gap: 40px;
+      }
    }
    &__info h2,
    &__info p,
@@ -29,7 +48,12 @@
 
    &__top {
       @include h.flex-m(column, space-between);
-      gap: clamp(0.625rem, 1.6vw, 1.875rem); // 10px 30px
+      gap: 30px;
+   }
+   @media (max-width: 992px) {
+      &__top {
+         // gap: 20px;
+      }
    }
 
    // .cost__title
@@ -74,8 +98,16 @@
    &__svg {
       max-width: 18.375rem; // 294px
       max-height: 16.125rem; // 258px
-      width: 100%;
       margin: 0 auto;
+      svg {
+         height: 100%;
+         width: 100%;
+      }
+   }
+   @media (max-width: 992px) {
+      &__svg {
+         max-width: 200px;
+      }
    }
 
    // .cost__bottom
@@ -123,7 +155,11 @@
       grid-template-columns: repeat(2, 1fr);
       column-gap: clamp(1rem, 1.6vw, 1.875rem);
       row-gap: clamp(1.5rem, 2.35vw, 2.75rem);
-      // gap: 44px 30px;
+   }
+   @media (max-width: 885px) {
+      &__items {
+         max-width: 100%;
+      }
    }
 
    // .cost__item
@@ -158,6 +194,12 @@
       max-height: 23.3125rem; // 373px
       padding: 6px;
       cursor: pointer;
+   }
+   @media (max-width: 885px) {
+      &__item-image {
+         max-width: none;
+         max-height: none;
+      }
    }
 }
 // ========= .corner  ==========

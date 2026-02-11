@@ -14,6 +14,7 @@
 
    &__container {
       @include h.flex(row, 0, space-between);
+      position: relative;
    }
 
    // .header__left
@@ -130,4 +131,99 @@
 .header__btn:hover {
    background-color: var(--accent-color);
    color: var(--primary-bg-color);
+}
+// ============= burger ================= //
+
+.burger {
+   display: none;
+   width: 44px;
+   height: 44px;
+   position: relative;
+   background-color: transparent;
+}
+
+.burger-line {
+   position: absolute;
+   left: 10px;
+   width: 24px;
+   height: 2px;
+   top: 50%;
+   transform: translateY(-50%);
+   border-radius: 10px;
+   background-color: var(--primary-text-color);
+   transition:
+      background-color 0.2s ease,
+      transform 0.2s ease,
+      opacity 0.2s ease;
+}
+.burger-line:nth-child(1) {
+   margin-top: -8px;
+}
+.burger-line:nth-child(2) {
+}
+.burger-line:nth-child(3) {
+   margin-top: 8px;
+}
+.header__nav {
+}
+
+@media (max-width: 992px) {
+   .burger {
+      position: fixed;
+      display: block;
+      top: 51px;
+      right: 20px;
+      transform: translateY(-50%);
+      z-index: 999;
+   }
+   .burger.active .burger-line {
+      background-color: var(--primary-bg-color);
+   }
+   .burger.active .burger-line:nth-child(1) {
+      margin: 0;
+      transform: translateY(-50%) rotate(45deg);
+   }
+   .burger.active .burger-line:nth-child(2) {
+      opacity: 0;
+   }
+   .burger.active .burger-line:nth-child(3) {
+      margin: 0;
+      transform: translateY(-50%) rotate(-45deg);
+   }
+   .header__right {
+      position: fixed;
+      transform: translateX(100%);
+      top: 0;
+      right: 0;
+      width: 50vw;
+      height: 100vh;
+      flex-direction: column;
+      align-items: start;
+      padding-left: 40px;
+      padding-top: 40px;
+      padding-bottom: 80px;
+      background-color: var(--light-bg-color);
+      transition: transform 0.2s ease;
+   }
+   .header__right.is-open {
+      transform: translateX(0);
+   }
+   .header__items {
+      flex-direction: column;
+      align-items: start;
+      color: var(--primary-bg-color);
+   }
+   .header__btn {
+      color: var(--primary-bg-color);
+   }
+   .header__connect .corner {
+      border-color: var(--primary-bg-color);
+   }
+}
+@media (max-width: 768px) {
+   .burger {
+   }
+   .header__right {
+      width: 100vw;
+   }
 }
