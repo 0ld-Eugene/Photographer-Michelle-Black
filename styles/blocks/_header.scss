@@ -28,13 +28,23 @@
 
    &__logo {
       height: 3.875rem; // 62px
+      max-width: 14.6875rem; // 235px
       display: flex;
       align-items: center;
-      max-width: 14.6875rem; // 235px
       padding: 1.5625rem 1.1875rem; // 25px 19px
       a {
          font-size: 1rem; // 16px
          text-transform: uppercase;
+      }
+   }
+   @media (max-width: 768px) {
+      &__logo {
+         height: 2.9375rem; // 47px
+         max-width: 13.1375rem; // 211px
+         padding: 1.25rem 1.1875rem; // 20x 19px
+         a {
+            font-size: 0.875rem; // 14px
+         }
       }
    }
 

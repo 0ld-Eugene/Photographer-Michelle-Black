@@ -16,7 +16,7 @@
          grid-template-columns: 1fr;
          grid-template-rows: auto auto;
          column-gap: 0;
-         row-gap: clamp(1.25rem, 4.5vw, 2.5rem);
+         row-gap: clamp(1rem, 2.5vw, 1.25rem);
          //
          grid-template-rows: auto auto auto;
       }
@@ -58,19 +58,14 @@
       }
       &__title--mobile {
          display: block;
-         font-size: clamp(28px, 6vw, 44px);
+         font-size: 28px;
+         max-width: 400px;
       }
       &__left {
          order: 2;
          gap: 3.125rem;
          h1 {
             display: none;
-         }
-      }
-   }
-   @media (max-width: 480px) {
-      &__left {
-         h1 {
          }
       }
    }
@@ -147,6 +142,12 @@
       img {
          object-fit: contain;
       }
+   }
+}
+@media (max-width: 768px) {
+   .hero {
+      padding-top: 6.25rem;
+      padding-bottom: 50px;
    }
 }
 

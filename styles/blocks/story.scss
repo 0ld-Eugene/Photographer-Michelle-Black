@@ -70,6 +70,12 @@
    &__block-b {
    }
 }
+@media (max-width: 768px) {
+   .story {
+      padding-top: 1.5625rem;
+      padding-bottom: 1.5625rem;
+   }
+}
 
 .block-a {
    display: flex;

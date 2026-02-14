@@ -1,13 +1,13 @@
 @use "helpers/intermediary" as h;
 
 .about {
-   // .about__container
    padding-bottom: 0;
    padding-top: 0;
 
+   // .about__container
    &__container {
-      padding-top: 8.75rem; // 140px
-      padding-bottom: 8.75rem; // 140px
+      padding-top: 13.75rem; // 220px
+      padding-bottom: 11.25rem; // 180px
 
       background-image: image-set(
          url("../images/about-bg.avif") type("image/avif"),
@@ -16,7 +16,25 @@
       );
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
+   }
+   @media (max-width: 992px) {
+      &__container {
+         padding-bottom: 8.75rem; // 140px
+         padding-top: 11.25rem; // 180px
+         background-size: cover;
+      }
+   }
+   @media (max-width: 768px) {
+      &__container {
+         padding-top: 8.75rem; // 140px
+         padding-bottom: 8.75rem; // 140px
+      }
+   }
+   @media (max-width: 590px) {
+      &__container {
+         background-position: -8.925rem;
+      }
    }
 
    // .about__inner
@@ -38,6 +56,16 @@
 
    &__title {
    }
+   @media (max-width: 992px) {
+      &__title {
+         font-size: 28px;
+      }
+   }
+   @media (max-width: 768px) {
+      &__title {
+         font-size: 20px;
+      }
+   }
 
    // .about__box
 
@@ -45,6 +73,11 @@
       width: 100%;
       @include h.flex-m(row, flex-start);
       gap: clamp(1.25rem, 2.65vw, 3.125rem);
+   }
+   @media (max-width: 992px) {
+      &__box {
+         flex-direction: column;
+      }
    }
 
    // .about__column
@@ -65,12 +98,24 @@
    &__column--right {
       max-width: 16.375rem; // 262px
    }
+   @media (max-width: 590px) {
+      &__column--left,
+      &__column--right {
+         max-width: 168px;
+         font-size: 12px;
+      }
+   }
 
    // .about__text
 
    &__text {
       letter-spacing: 0em;
       text-align: justify;
+   }
+   @media (max-width: 992px) {
+      &__text:nth-child(2) {
+         display: none;
+      }
    }
 
    // .about__decor
@@ -79,5 +124,22 @@
       max-width: 16.875rem; // 270px
       color: var(--accent-color);
       text-align: justify;
+   }
+   @media (max-width: 1200px) {
+      &__decor {
+         transform: translateY(40px);
+      }
+   }
+   @media (max-width: 992px) {
+      &__decor {
+         transform: translateY(60px);
+      }
+   }
+   @media (max-width: 768px) {
+      &__decor {
+         max-width: 132px; // 270px
+         font-size: 12px;
+         transform: translateY(70px);
+      }
    }
 }
