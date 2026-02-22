@@ -71,6 +71,11 @@
 
    &__tabs-btn--separator {
    }
+   @media (max-width: 420px) {
+      &__tabs-btn--separator {
+         display: none;
+      }
+   }
 
    // .gallery__tabs-inner
 

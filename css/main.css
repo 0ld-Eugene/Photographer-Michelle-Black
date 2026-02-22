@@ -1374,6 +1374,11 @@ h4 {
 .gallery__tabs-btn {
   cursor: pointer;
 }
+@media (max-width: 420px) {
+  .gallery__tabs-btn--separator {
+    display: none;
+  }
+}
 .gallery__tabs-images {
   display: none;
   overflow: hidden;
