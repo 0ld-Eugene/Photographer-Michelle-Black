@@ -726,7 +726,6 @@ h4 {
 @media (max-width: 1200px) {
   .hero__left h1 {
     font-size: 2.25rem;
-    font-size: 36px;
   }
 }
 @media (max-width: 992px) {
@@ -740,12 +739,12 @@ h4 {
   }
   .hero__title--mobile {
     display: block;
-    font-size: 28px;
-    max-width: 400px;
+    font-size: 1.75rem;
+    max-width: 25rem;
   }
   .hero__left {
     order: 2;
-    gap: 3.125rem;
+    gap: 1.5rem;
   }
   .hero__left h1 {
     display: none;
@@ -785,6 +784,11 @@ h4 {
     grid-area: auto;
   }
 }
+@media (max-width: 680px) {
+  .hero__item {
+    font-size: 0.75rem;
+  }
+}
 .hero__text {
   display: flex;
   justify-content: space-between;
@@ -792,10 +796,19 @@ h4 {
 .hero__text p {
   max-width: 12.8125rem;
   text-align: justify;
+  font-size: inherit;
 }
 @media (max-width: 768px) {
   .hero__text {
-    gap: 20px;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 680px) {
+  .hero__text {
+    font-size: 0.75rem;
+  }
+  .hero__text p {
+    max-width: 11rem;
   }
 }
 .hero__image {
@@ -812,23 +825,23 @@ h4 {
 @media (max-width: 768px) {
   .hero {
     padding-top: 6.25rem;
-    padding-bottom: 50px;
+    padding-bottom: 4.375rem;
   }
 }
 .item-left {
   transform: translate(0, 0);
-  max-width: 96px;
+  max-width: 6rem;
 }
 
 .item-center {
-  transform: translate(clamp(20px, 13.8vw, 200px), clamp(15px, 4.65vw, 67px));
-  max-width: 90px;
+  transform: translate(clamp(1.25rem, 13.8vw, 12.5rem), clamp(0.9375rem, 4.65vw, 4.1875rem));
+  max-width: 5.625rem;
 }
 
 .item-right {
-  transform: translate(clamp(80px, 27.7vw, 400px), clamp(45px, 9.51vw, 137px));
-  width: 124px;
-  height: 109px;
+  transform: translate(clamp(5rem, 27.7vw, 25rem), clamp(2.8125rem, 9.51vw, 8.5625rem));
+  width: 7.75rem;
+  height: 6.8125rem;
   display: flex;
   align-items: center;
 }
@@ -841,8 +854,8 @@ h4 {
 }
 .item-right span {
   display: inline-block;
-  padding: 0 33px;
-  word-spacing: 25px;
+  padding: 0 2.0625rem;
+  word-spacing: 1.5625;
 }
 
 @media (max-width: 768px) {
@@ -850,6 +863,15 @@ h4 {
   .item-center,
   .item-right {
     transform: none;
+  }
+}
+@media (max-width: 680px) {
+  .item-right {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+  .item-right span {
+    padding: 0 1.5625rem;
   }
 }
 .story {
@@ -862,12 +884,7 @@ h4 {
   justify-content: flex-start;
   align-items: stretch;
   gap: 0px;
-  gap: clamp(0.62rem, 2.5vw, 2.69rem);
-}
-@media (max-width: 1200px) {
-  .story__container {
-    gap: 40px;
-  }
+  gap: clamp(1.125rem, 2.5vw, 2.5rem);
 }
 .story__title {
   display: flex;
@@ -927,6 +944,12 @@ h4 {
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .block-a__text {
+    font-size: 14px;
+    max-width: 190px;
+  }
+}
 .block-a__decor {
   max-width: 12.5rem;
   max-height: 10.9375rem;
@@ -938,9 +961,20 @@ h4 {
 @media (max-width: 870px) {
   .block-a__decor {
     max-width: 100%;
+    max-width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .block-a__decor {
+    max-width: 120px;
   }
 }
 
+@media (max-width: 870px) {
+  .block-a {
+    justify-content: space-between;
+  }
+}
 .block-b {
   max-width: 37.25rem;
   display: flex;
@@ -958,6 +992,11 @@ h4 {
 @media (max-width: 1100px) {
   .block-b__title {
     font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .block-b__title {
+    font-size: 14px;
   }
 }
 .block-b__text {
@@ -981,6 +1020,11 @@ h4 {
   .block-b {
     max-width: 100%;
     gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .block-b p {
+    font-size: 12px;
   }
 }
 .about {
@@ -1314,7 +1358,17 @@ h4 {
 }
 @media (max-width: 680px) {
   .gallery__tabs-buttons {
+    font-size: 16px;
+  }
+}
+@media (max-width: 540px) {
+  .gallery__tabs-buttons {
     font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .gallery__tabs-buttons {
+    font-size: 12px;
   }
 }
 .gallery__tabs-btn {
@@ -1331,6 +1385,24 @@ h4 {
 .gallery__tabs-slide {
   width: 100%;
   flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .gallery__tabs-images {
+    height: 120px;
+  }
+  .gallery__tabs-track {
+    height: 100%;
+  }
+  .gallery__tabs-slide {
+    height: 100%;
+  }
+  .gallery__tabs-slide picture, .gallery__tabs-slide img {
+    height: 100%;
+    width: 100%;
+  }
+  .gallery__tabs-slide img {
+    object-fit: cover;
+  }
 }
 
 .gallery__tabs-images.active {

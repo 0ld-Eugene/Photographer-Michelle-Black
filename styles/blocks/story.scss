@@ -8,12 +8,7 @@
 
    &__container {
       @include h.flex(column);
-      gap: clamp(0.62rem, 2.5vw, 2.69rem);
-   }
-   @media (max-width: 1200px) {
-      &__container {
-         gap: 40px;
-      }
+      gap: clamp(1.125rem, 2.5vw, 2.5rem);
    }
 
    // .story__title
@@ -97,6 +92,12 @@
          max-width: 100%;
       }
    }
+   @media (max-width: 768px) {
+      &__text {
+         font-size: 14px;
+         max-width: 190px;
+      }
+   }
 
    // .block-a__decor
 
@@ -112,7 +113,18 @@
    @media (max-width: 870px) {
       &__decor {
          max-width: 100%;
+         max-width: 200px;
       }
+   }
+   @media (max-width: 500px) {
+      &__decor {
+         max-width: 120px;
+      }
+   }
+}
+@media (max-width: 870px) {
+   .block-a {
+      justify-content: space-between;
    }
 }
 
@@ -131,6 +143,11 @@
    @media (max-width: 1100px) {
       &__title {
          font-size: 20px;
+      }
+   }
+   @media (max-width: 768px) {
+      &__title {
+         font-size: 14px;
       }
    }
 
@@ -159,5 +176,12 @@
    .block-b {
       max-width: 100%; // 470px
       gap: 20px;
+   }
+}
+@media (max-width: 768px) {
+   .block-b {
+      p {
+         font-size: 12px;
+      }
    }
 }

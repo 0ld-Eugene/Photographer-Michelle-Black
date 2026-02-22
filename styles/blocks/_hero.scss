@@ -17,7 +17,6 @@
          grid-template-rows: auto auto;
          column-gap: 0;
          row-gap: clamp(1rem, 2.5vw, 1.25rem);
-         //
          grid-template-rows: auto auto auto;
       }
    }
@@ -41,7 +40,6 @@
       &__left {
          h1 {
             font-size: 2.25rem;
-            font-size: 36px;
          }
       }
    }
@@ -58,12 +56,12 @@
       }
       &__title--mobile {
          display: block;
-         font-size: 28px;
-         max-width: 400px;
+         font-size: 1.75rem; // 28px
+         max-width: 25rem; // 400px
       }
       &__left {
          order: 2;
-         gap: 3.125rem;
+         gap: 1.5rem;
          h1 {
             display: none;
          }
@@ -114,6 +112,11 @@
          grid-area: auto;
       }
    }
+   @media (max-width: 680px) {
+      &__item {
+         font-size: 0.75rem; // 12px
+      }
+   }
 
    // .hero__text
 
@@ -123,11 +126,20 @@
       p {
          max-width: 12.8125rem; // 205px
          text-align: justify;
+         font-size: inherit;
       }
    }
    @media (max-width: 768px) {
       &__text {
-         gap: 20px;
+         gap: 1.25rem; // 20px
+      }
+   }
+   @media (max-width: 680px) {
+      &__text {
+         font-size: 0.75rem;
+         p {
+            max-width: 11rem; // 176px
+         }
       }
    }
 
@@ -147,24 +159,24 @@
 @media (max-width: 768px) {
    .hero {
       padding-top: 6.25rem;
-      padding-bottom: 50px;
+      padding-bottom: 4.375rem;
    }
 }
 
 .item-left {
    transform: translate(0, 0);
-   max-width: 96px;
+   max-width: 6rem; // 96px
 }
 .item-center {
    // transform: translate(200px, 67px);
-   transform: translate(clamp(20px, 13.8vw, 200px), clamp(15px, 4.65vw, 67px));
-   max-width: 90px;
+   transform: translate(clamp(1.25rem, 13.8vw, 12.5rem), clamp(0.9375rem, 4.65vw, 4.1875rem));
+   max-width: 5.625rem; // 90px
 }
 .item-right {
    // transform: translate(400px, 137px);
-   transform: translate(clamp(80px, 27.7vw, 400px), clamp(45px, 9.51vw, 137px));
-   width: 124px;
-   height: 109px;
+   transform: translate(clamp(5rem, 27.7vw, 25rem), clamp(2.8125rem, 9.51vw, 8.5625rem));
+   width: 7.75rem;
+   height: 6.8125rem;
    display: flex;
    align-items: center;
    svg {
@@ -176,8 +188,8 @@
    }
    span {
       display: inline-block;
-      padding: 0 33px;
-      word-spacing: 25px;
+      padding: 0 2.0625rem; // 33px
+      word-spacing: 1.5625; // 25px
    }
 }
 @media (max-width: 768px) {
@@ -185,5 +197,14 @@
    .item-center,
    .item-right {
       transform: none;
+   }
+}
+@media (max-width: 680px) {
+   .item-right {
+      width: 6.25rem; // 100px
+      height: 6.25rem; // 100px
+      span {
+         padding: 0 1.5625rem;
+      }
    }
 }
