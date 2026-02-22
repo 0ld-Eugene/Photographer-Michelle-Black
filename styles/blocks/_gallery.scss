@@ -60,6 +60,13 @@
          font-size: 12px;
       }
    }
+   @media (max-width: 420px) {
+      &__tabs-buttons {
+         span {
+            display: none;
+         }
+      }
+   }
 
    // .gallery__tabs-btn
 
@@ -70,11 +77,6 @@
    // .gallery__tabs-btn--separator
 
    &__tabs-btn--separator {
-   }
-   @media (max-width: 420px) {
-      &__tabs-btn--separator {
-         display: none;
-      }
    }
 
    // .gallery__tabs-inner

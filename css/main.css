@@ -1371,13 +1371,13 @@ h4 {
     font-size: 12px;
   }
 }
-.gallery__tabs-btn {
-  cursor: pointer;
-}
 @media (max-width: 420px) {
-  .gallery__tabs-btn--separator {
+  .gallery__tabs-buttons span {
     display: none;
   }
+}
+.gallery__tabs-btn {
+  cursor: pointer;
 }
 .gallery__tabs-images {
   display: none;
