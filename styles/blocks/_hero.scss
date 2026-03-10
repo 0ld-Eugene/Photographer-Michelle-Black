@@ -1,7 +1,7 @@
 @use "helpers/intermediary" as h;
 
 .hero {
-   padding-top: calc(6.25rem + 3.125rem);
+   padding-top: 6.25rem;
    padding-bottom: clamp(4.375rem, 14.5vw, 6.25rem); // 70px 100px
 
    // .hero__container
@@ -104,7 +104,7 @@
       grid-area: 1 / 1;
       font-size: 1.125rem; // 18px
       line-height: 0.87;
-      word-spacing: 4px;
+      text-align: justify;
       color: var(--accent-color);
    }
    @media (max-width: 768px) {
@@ -152,13 +152,12 @@
       aspect-ratio: 500 / 574;
       overflow: hidden;
       img {
-         object-fit: contain;
+         object-fit: cover;
       }
    }
 }
 @media (max-width: 768px) {
    .hero {
-      padding-top: 6.25rem;
       padding-bottom: 4.375rem;
    }
 }
