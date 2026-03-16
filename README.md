@@ -1,6 +1,6 @@
 ## Project name 
 
-Photographer Michelle Black
+Landing page for a photographer Michelle Black
 
 ## Project launch
 
@@ -11,8 +11,12 @@ Photographer Michelle Black
 
 ## Features
 
+- Gulp
+- SCSS (BEM)
 - SVG-sprites
 - Vanilla JavaScript (no libraries)
 - Modal window (image preview)
 - Hover image preview (cursor-follow)
 - Tabs navigation
+- Image optimization
+- Custom gallery
